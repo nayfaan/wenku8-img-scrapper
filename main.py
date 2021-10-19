@@ -35,8 +35,8 @@ def scrap(driver):
         
         for j in range(len(img_list)):
             file_ext = re.match(".*\.(.+)$", img_list[j])[1]
-            urllib.request.urlretrieve(img_list[j], os.path.join(IMG_FOLDER, str(j+1) + "." + file_ext))
-            print("Retrieved: " str(i+1) +"."+ str(j+1))
+            urllib.request.urlretrieve(img_list[j], os.path.join(IMG_FOLDER, f"{j+1:02d}" + "." + file_ext))
+            print("Retrieved: " + str(i+1) + "." + str(j+1))
     
 def run():
     driver = services.startDriver.start()
