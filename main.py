@@ -13,7 +13,7 @@ OUTPUT = os.path.join(ROOT_DIR, "output/")
 pathlib.Path(OUTPUT).mkdir(parents=True, exist_ok=True)
 
 global book_num
-book_num = "2478"
+book_num = "1829"
 
 def scrap(driver):
     img_chp_obj = driver.find_elements_by_xpath("//*[contains(text(), '插图')]")
